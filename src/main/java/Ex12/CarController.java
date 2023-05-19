@@ -1,4 +1,4 @@
-package Ex11;
+package Ex12;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,11 +40,11 @@ public class CarController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Car> updateCarType(@PathVariable Long id, @RequestBody Car car) {
+    public ResponseEntity<Car> updateCarType(@PathVariable Long id, @RequestParam String type) {
         Optional<Car> optionalCar = carRepo.findById(id);
         if (optionalCar.isPresent()) {
             Car existingCar = optionalCar.get();
-            existingCar.setType(car.getType());
+            existingCar.setType(type);
             return ResponseEntity.ok(carRepo.save(existingCar));
         } else {
             return ResponseEntity.notFound().build();

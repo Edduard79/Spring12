@@ -1,4 +1,4 @@
-package Ex11;
+package Ex12;
 
 import jakarta.persistence.*;
 
