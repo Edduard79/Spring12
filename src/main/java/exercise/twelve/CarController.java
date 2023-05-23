@@ -1,4 +1,4 @@
-package Ex12;
+package exercise.twelve;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

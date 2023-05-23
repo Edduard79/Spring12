@@ -1,4 +1,4 @@
-package Ex12;
+package exercise.twelve;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
