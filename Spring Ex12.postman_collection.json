@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"modelName\": \"Opel Astra\",\r\n    \"type\": \"CityCar\"\r\n}",
+					"raw": "{\r\n    \"modelName\": \"BMWI8\",\r\n    \"type\": \"Sport\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -92,20 +92,23 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"SUV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{base_url}}/cars/1?type=SUV",
+					"raw": "{{base_url}}/cars/2",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"cars",
-						"1"
-					],
-					"query": [
-						{
-							"key": "type",
-							"value": "SUV"
-						}
+						"2"
 					]
 				}
 			},
