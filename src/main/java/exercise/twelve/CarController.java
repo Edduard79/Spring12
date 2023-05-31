@@ -51,7 +51,8 @@ public class CarController {
         if (optionalCar.isPresent()) {
             Car existingCar = optionalCar.get();
             existingCar.setType(car.getType());
-            return ResponseEntity.ok(carRepo.save(existingCar));
+            Car updatedCar = carRepo.save(existingCar);
+            return ResponseEntity.ok(updatedCar);
         } else {
             return ResponseEntity.notFound().build();
         }
@@ -67,12 +68,5 @@ public class CarController {
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
     }
-
-    @DeleteMapping
-    public ResponseEntity<Car> deleteAll() {
-        carRepo.deleteAll();
-        return ResponseEntity.noContent().build();
-    }
-
 
 }
