@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"modelName\": \"Opel Vectra\",\r\n    \"type\": \"Sedan\"\r\n}",
+					"raw": "{\r\n    \"modelName\": \"Fiat\",\r\n    \"type\": \"City\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"modelName\": \"Fiat 500\",\r\n    \"type\": \"SUV\"\r\n}",
+					"raw": "{\r\n    \"modelName\": \"Fiat\",\r\n    \"type\": \"SUV\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,19 +102,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/cars/2?type=SUV",
+					"raw": "{{base_url}}/cars/5",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"cars",
-						"2"
-					],
-					"query": [
-						{
-							"key": "type",
-							"value": "SUV"
-						}
+						"5"
 					]
 				}
 			},

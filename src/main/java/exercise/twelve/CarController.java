@@ -48,12 +48,12 @@ public class CarController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Car> updateCarType(@PathVariable Long id, @RequestParam String type) {
+    public ResponseEntity<Car> updateCar(@PathVariable Long id, @RequestBody Car newCar) {
         Optional<Car> optionalCar = carRepo.findById(id);
         if (optionalCar.isPresent()) {
             Car existingCar = optionalCar.get();
-            existingCar.setType(type);
-            Car updatedCar = carRepo.save(existingCar);
+            newCar.setId(id);
+            Car updatedCar = carRepo.save(newCar);
             return ResponseEntity.ok(updatedCar);
         } else {
             return ResponseEntity.notFound().build();
